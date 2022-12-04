@@ -1,11 +1,15 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import LeafletMap from "./components/LeafletMap.vue";
+</script>
 
 <template>
   <div id="flex-container">
     <header>
       <h1>Header</h1>
     </header>
-    <main></main>
+    <main>
+      <LeafletMap></LeafletMap>
+    </main>
     <footer>Footer</footer>
   </div>
 </template>
