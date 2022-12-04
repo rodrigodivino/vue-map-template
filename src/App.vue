@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import LeafletMap from "./components/LeafletMap.vue";
+
+const handleMapMove = (event: L.LeafletEvent) => {
+  console.log("move", (event.target as L.Map).getBounds());
+};
+
+const handleMapZoom = (event: L.LeafletEvent) => {
+  console.log("zoom");
+};
 </script>
 
 <template>
@@ -8,7 +16,7 @@ import LeafletMap from "./components/LeafletMap.vue";
       <h1>Header</h1>
     </header>
     <main>
-      <LeafletMap></LeafletMap>
+      <LeafletMap @move="handleMapMove" @zoom="handleMapZoom"></LeafletMap>
     </main>
     <footer>Footer</footer>
   </div>
